@@ -1,0 +1,52 @@
+{% url 'home' as url_home %}
+{% url 'details' as url_details %} 
+<div class="container-fluid">
+    <header>
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3 sidebar-sticky">
+          <ul class="nav flex-column">
+            {% if request.path == url_home %}
+            <li class="nav-item">
+              <a  href="{{url_home}}" class="nav-link active">
+                <span data-feather="file" class="align-text-bottom"></span>
+                Home Page
+              </a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a  href="{{url_home}}" class="nav-link">
+                <span data-feather="file" class="align-text-bottom"></span>
+                Home Page
+              </a>
+
+            {% endif %}
+            {% if request.path == url_details %}
+            <li class="nav-item">
+              <a  href="{{url_details}}" class="nav-link active">
+                <span data-feather="file" class="align-text-bottom"></span>
+                Détail-pays
+              </a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a  href="{{url_details}}" class="nav-link">
+                <span data-feather="file" class="align-text-bottom"></span>
+                Détail-pays
+              </a>
+
+            {% endif %}
+            
+          </ul>
+  
+         
+        </div>
+      </nav>
+  
+      
+  
+        
+        
+
+    </header>
+  </div>
