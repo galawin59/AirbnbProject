@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+
+<body>
+    
+
+    
+    <div class="container-fluid">
+      <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+          <div class="position-sticky pt-3 sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <span data-feather="home" class="align-text-bottom"></span>
+                  Home Page
+                </a>
+              </li>
+              {% if request.path == url_details %}
+              <li class="nav-item">
+                <a  href="details/" class="nav-link active">
+                  <span data-feather="file" class="align-text-bottom"></span>
+                  Détail-pays
+                </a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a  href="details/"class="nav-link">
+                  <span data-feather="file" class="align-text-bottom"></span>
+                  Détail-pays
+                </a>
+
+              {% endif %}
+              
+            </ul>
+    
+           
+          </div>
+        </nav>
+    
+        
+    
+          
+          
+        </main>
+      
+    </div>
+
+
+{% endblock content %}
+
