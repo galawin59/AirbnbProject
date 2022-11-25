@@ -1,25 +1,92 @@
 
 
 {% extends 'base.html' %}
+{% load static %}
 
 
 
 {% block content %}
-
-
+<div style="text-align: center;">
+<h3>Moyenne en fonction du type de room
+</h3>
+</div>
+<br>
 {{table|safe}}
    <br> 
+   <div style="text-align: center;">
+    <h3>Ecart Type en fonction du type de room
+    </h3>
+    </div>
+    <br>
 {{tableEcart|safe}}
 <br>
+<div style="text-align: center;">
+  <h3>Nombre d'annonce en fonction de la valeur de salle de bain
+  </h3>
+  </div>
+  <br>
+
 {{tableBath|safe}}
 <br>
 
-
+<div style="text-align: center;">
+  <h3>Prix median par type de room
+  </h3>
+  </div>
+  <br>
 {{tableQuart|safe}}
 
 <br>
-{{tableNbHost|safe}}
-<br>
-{{tableNbReview|safe}}
+<div style="text-align: center;">
+  <h3>Nombre d'host et nombre de reviews en fonction des quartiers
+  </h3>
+  </div>
+  <br>
+<div style="float:left;width:50%;">{{tableNbHost|safe}}</div>
 
+<div style="float:left;width:50%;">{{tableNbReview|safe}}</div>
+
+
+
+
+
+
+
+<br>
+<div style="text-align: center;">
+  <h3>Pourcentage des host de verifications
+  </h3>
+  </div>
+  <br>
+<div style="text-align: center;">
+<img class="center" src="{% static 'divers/phone2.png' %}">
+</div>
+
+
+<div style="text-align: center;">
+  <h3>Pourcentage d'acceptation et réponse moyen des host :
+    <br>
+
+  </h3>
+  <h6>
+    93.48 % de reponse
+    <br>
+    <br>
+    82.10 % d'acceptation  </h6>
+  </div>
+  <br>
+
+
+  <div style="text-align: center;">
+    <h3>Corelation entre le nombre de reviews et la taille de la description :  0.18
+      <br>
+    </div>
+    <br>
+
+
+    <div style="text-align: center;">
+      <h3>Pourcentage de faux commentaire : 0.0018%
+        <br>
+      </div>
+      <br>
 {% endblock content %}

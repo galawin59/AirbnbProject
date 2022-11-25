@@ -36,7 +36,5 @@ def datatable(request):
         })
 
 
-def importImage(request):
-    img = open("divers/phone.png","rb").read()
-    return HttpResponse(img,content_type ="image/png")
+
 
